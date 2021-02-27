@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Курсы валют</title>
+</head>
+
+<body>
+    <nav>
+        <header class="text-center">
+            <h3>Курсы валют</h3>
+            <div id="date"></div>
+        </header>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-9">
+                <table class="table table-striped table-bordered table-hover" id="currencyRate">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Код страны</th>
+                            <th scope="col">Валюта</th>
+                            <th scope="col">Значение</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
