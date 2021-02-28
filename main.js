@@ -1,7 +1,7 @@
 fetch('https://www.cbr-xml-daily.ru/daily_json.js')
     .then(response => response.json())
     .then(data => {
-        loadDate(new Date(data.Date));
+        loadDate(new Date(data.Timestamp));
         let text = makeHtmlText(data);
         loadToTable(text);
     });
