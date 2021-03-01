@@ -2,11 +2,11 @@ let promise = fetch('https://www.cbr-xml-daily.ru/daily_json.js')
     .then(response => response.json())
     .then(data => {
         updateData(data);
+        console.log(data);
         return data;
     });
 
 setInterval(() => {
-
     console.log(promise['PromiseResult']);
 }, 1000);
 
