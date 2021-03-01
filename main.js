@@ -2,13 +2,13 @@ let promise = fetch('https://www.cbr-xml-daily.ru/daily_json.js')
     .then(response => response.json())
     .then(data => {
         updateData(data);
-        console.log(data);
         return data;
+    })
+    .then(data => {
+        setInterval(() => {
+            updateData(data);
+        }, 5000);
     });
-
-setInterval(() => {
-    console.log(promise['PromiseResult']);
-}, 1000);
 
 function loadDate(date) {
     let dateDiv = document.getElementById('date');
@@ -56,7 +56,7 @@ function makeHtmlText(data) {
 
 function loadToTable(htmlText) {
     let table = document.getElementById('currencyRate');
-    table.innerHTML += htmlText;
+    table.innerHTML = htmlText;
 }
 
 function updateData(data) {
